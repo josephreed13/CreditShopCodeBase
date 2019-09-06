@@ -1,5 +1,5 @@
 #topRow {
-	margin-top: 68px;
+	margin-top: 40px;
 }
 
 #cardHeader {
@@ -21,6 +21,15 @@
 	border-radius: 8px;
   	box-shadow: 0 3px 22px 0 rgba(222,232,243,0.31);
   	margin-bottom: 30px;
+  	margin-left: 20px;
+}
+
+#listingHeader {
+	padding-top: 10px;
+}
+
+#listingTitle {
+	padding-top: 10px;
 }
 
 #currentBalance {
@@ -70,6 +79,7 @@
 .show {
 	display:block;
 }
+
 
 #paymentDiv {
 	padding: 10px;

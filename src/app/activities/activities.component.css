@@ -17,9 +17,8 @@
 }
 
 #listing {
-	background-color: #FFF;
 	border-radius: 8px;
-  	box-shadow: 0 3px 22px 0 rgba(222,232,243,0.31);
+	margin-left: 20px;
 }
 
 #currentBalance {
@@ -64,10 +63,11 @@
 }
 
 .activityCard {
+	box-shadow: 0 3px 22px 0 rgba(222,232,243,0.31);
+	background-color: #FFF;
 	border: 1px solid #041467;
 	border-radius: 4px;
-	margin: 10px;
-	box-shadow: 5px 8px #F5F5F5;
+	margin: 20px;
 }
 
 .activityTitle {
