@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Offers</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-38.000000, -421.000000)">
+            <g id="Offers" transform="translate(38.000000, 422.000000)">
+                <path d="M1.15300969,5 L2.8672954,17 L15.1327046,17 L16.8469903,5 L1.15300969,5 Z" id="Rectangle-Copy-12" stroke="#98A0C2" stroke-width="2"></path>
+                <rect id="Rectangle-Copy-13" fill="#98A0C2" x="1" y="8" width="16" height="2" rx="1"></rect>
+                <path d="M13,4 C13,1.790861 11.209139,0 9,0 C6.790861,0 5,1.790861 5,4" id="Oval" stroke="#98A0C2" stroke-width="2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,66 @@
+#topRow {
+	margin-top: 68px;
+}
+
+#cardHeader {
+	height: 26px;
+	width: 313px;
+	color: #041467;
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 0.83px;
+	line-height: 26px;
+}
+
+#contentRow {
+	margin-top: 20px;
+}
+
+#listing {
+	background-color: #FFF;
+	border-radius: 8px;
+  	box-shadow: 0 3px 22px 0 rgba(222,232,243,0.31);
+}
+
+#currentBalance {
+	font-size: 50px;
+  	font-weight: 500;
+  	letter-spacing: 0.75px;
+  	line-height: 60px;
+}
+
+#tableDiv {
+	padding-top: 15px;
+}
+
+#paymentsTable {
+	width: 96%;
+
+}
+
+#paymentsTable td {
+	padding: 10px;
+	color: #041467;
+  	font-weight: 500;
+  	letter-spacing: 0.53px;
+  	line-height: 18px;
+}
+
+.dimTD {
+	color: #98A0C2 !important;
+}
+
+.greenPay {
+	color: #1CD760 !important;
+}
+
+.sideCard {
+	font-size: 14px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+tr:nth-Child(even) {background-color: #FFF;}
+tr:nth-Child(odd) {background-color: #F7FBFF;}

@@ -1,0 +1,57 @@
+<div id="topRow" class="row">
+	<div id="cardHeader" class="col-lg-9 offset-lg-1">
+		<p>Mercury Mastercard (...5867)</p>
+	</div>
+	<div class="col-lg-2">
+		<a routerLink="/">Account Details</a>
+	</div>
+</div>
+<div id="contentRow" class="row">
+	<div id="listing" class="col-lg-6 offset-lg-1">
+		<div class="row">
+			<div class="col-lg-7">
+				<div class="row">
+					<div class="col-lg-7">Current Balance</div>
+				</div>
+				<div class="row">
+					<div id="currentBalance" class="col-lg-12">$2,489.77</div>
+				</div>
+			</div>
+			<div class="col-lg-5 my-auto">
+				<button type="button" id="makePaymentBtn" class="btn btn-lg btn-primary">Make Payment</button>
+			</div>
+		</div>
+		<div id="tableDiv" class="row justify-content-center">
+			<table id="paymentsTable">
+				<tbody>
+					<tr *ngFor="let x of payments">
+						<td class="dimTD">{{ x.date }}</td>
+						<td class="dimTD">{{ x.name }}</td>
+						<td [ngClass]="{'greenPay': x.payment==1}">${{ x.amt }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="row">
+			<div class="col-lg-12 sideCard">
+				<h4>1 new notification</h4>
+				<p>Important tax documentation enclosed. <a routerLink="/">View</a></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 sideCard">
+				<h4>Welcome, {{ userName }}</h4>
+				<p>The CreditShop user portal gives you the power and control you need to manage your account. 
+					<br><br><button class="btn btn-secondary">Go to activities</button></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 sideCard">
+				<h4>1 new notification</h4>
+				<p>Important tax documentation enclosed. <a routerLink="/">View</a></p>
+			</div>
+		</div>
+	</div>
+</div>
