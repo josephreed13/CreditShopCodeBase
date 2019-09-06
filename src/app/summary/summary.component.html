@@ -1,9 +1,9 @@
 <div id="topRow" class="row">
-	<div id="cardHeader" class="col-lg-9 offset-lg-1">
+	<div id="cardHeader" class="col-lg-8 offset-lg-1">
 		<p>Mercury Mastercard (...5867)</p>
 	</div>
 	<div class="col-lg-2">
-		<a routerLink="/">Account Details</a>
+		<a href="https://www.linkedin.com/in/joseph-reed-6a36b3a1/" target="_blank">Account Details</a>
 	</div>
 </div>
 <div id="contentRow" class="row">
@@ -14,11 +14,39 @@
 					<div class="col-lg-7">Current Balance</div>
 				</div>
 				<div class="row">
-					<div id="currentBalance" class="col-lg-12">$2,489.77</div>
+					<div id="currentBalance" class="col-lg-12">${{ currentBalance }}</div>
 				</div>
 			</div>
 			<div class="col-lg-5 my-auto">
-				<button type="button" id="makePaymentBtn" class="btn btn-lg btn-primary">Make Payment</button>
+				<button (click)="paymentBtnClick()" type="button" id="makePaymentBtn" class="btn btn-lg btn-primary">Make Payment</button>
+			</div>
+		</div>
+		<div *ngIf="makePayment">
+			<div class="row">
+				<div id="paymentDiv" class="col-lg-10 offset-lg-1">
+					<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+						<div class="form-group">
+							<label>
+						      	Amount:
+						      	<input class="form-control" type="number" formControlName="amount" placeholder="100.00">
+						      	<div *ngIf="submitted && paymentForm.controls.amount.errors" class="error">
+						        	<div *ngIf="paymentForm.controls.amount.errors.required">Please enter an amount.</div>
+						      	</div>
+						    </label>
+						</div>
+					    <div class="form-group">
+						    <label>
+						      	Description:
+						      	<input class="form-control" type="text" formControlName="description" placeholder="Weekly Payment!">
+						      	<div *ngIf="submitted && paymentForm.controls.description.errors" class="error">
+						        	<div *ngIf="paymentForm.controls.description.errors.required">A message is required.</div>
+						      	</div>
+						    </label>
+					    </div>
+
+					    <button type="submit" class="btn btn-outline-success btn-md">Submit Payment</button>
+					</form>	
+				</div>
 			</div>
 		</div>
 		<div id="tableDiv" class="row justify-content-center">
@@ -36,22 +64,43 @@
 	<div class="col-lg-4">
 		<div class="row">
 			<div class="col-lg-12 sideCard">
-				<h4>1 new notification</h4>
-				<p>Important tax documentation enclosed. <a routerLink="/">View</a></p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12 sideCard">
 				<h4>Welcome, {{ userName }}</h4>
-				<p>The CreditShop user portal gives you the power and control you need to manage your account. 
-					<br><br><button class="btn btn-secondary">Go to activities</button></p>
+				<p>The CreditShop user portal gives you the power and control you need to manage your account. Add quick link widgets to this column!
+					<br><br><a routerLink="/activities"><button class="btn btn-outline-secondary">Go to activities</button></a></p>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12 sideCard">
-				<h4>1 new notification</h4>
-				<p>Important tax documentation enclosed. <a routerLink="/">View</a></p>
+		<!-- ng if statement -->
+		<div *ngIf="notifications">
+			<div class="row">
+				<div class="col-lg-12 sideCard">
+					<app-notifications></app-notifications>
+				</div>
 			</div>
 		</div>
+		<!-- ng if statement -->
+		<div *ngIf="benefits">
+			<div class="row">
+				<div class="col-lg-12 sideCard">
+					<app-benefits></app-benefits>
+				</div>
+			</div>
+		</div>
+		<!-- ng if statement -->
+		<div *ngIf="breakdown">
+			<div class="row">
+				<div class="col-lg-12 sideCard">
+					<app-breakdown></app-breakdown>
+				</div>
+			</div>
+		</div>
+		<!-- ng if statement -->
+		<div *ngIf="offers">
+			<div class="row">
+				<div class="col-lg-12 sideCard">
+					<app-offers></app-offers>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>

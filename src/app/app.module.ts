@@ -9,7 +9,10 @@ import { SummaryComponent } from './summary/summary.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { OffersComponent } from './offers/offers.component';
-
+import { NotificationsComponent } from './notifications/notifications.component';
+import { BenefitsComponent } from './benefits/benefits.component';
+import { BreakdownComponent } from './breakdown/breakdown.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,12 +20,16 @@ import { OffersComponent } from './offers/offers.component';
     SummaryComponent,
     ActivitiesComponent,
     PaymentsComponent,
-    OffersComponent
+    OffersComponent,
+    NotificationsComponent,
+    BenefitsComponent,
+    BreakdownComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

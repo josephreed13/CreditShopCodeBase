@@ -1,6 +1,6 @@
 <div id="topRow" class="row">
 	<div id="cardHeader" class="col-lg-9 offset-lg-1">
-		<p>Customize your dashboard</p>
+		<p>Customize your Summary's quick links!</p>
 	</div>
 </div>
 <div id="contentRow" class="row">
@@ -27,7 +27,13 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="float-right">
-									<button type="button" class="btn btn-outline-success btn-lg activityBtn">Add</button>
+									<button 
+										[ngClass]="benefits == true ? 'btn btn-outline-danger btn-lg activityBtn' : 'btn btn-outline-success btn-lg activityBtn'"
+										(click)="changeStatus('benefits')">
+									
+											<div *ngIf="benefits == true; else elseBlock">Remove</div>
+											<ng-template #elseBlock>Add</ng-template>		
+									</button>
 								</div> 
 							</div>
 						</div>
@@ -46,7 +52,13 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="float-right">
-									<button type="button" class="btn btn-outline-success btn-lg activityBtn">Add</button>
+									<button 
+										[ngClass]="breakdown == true ? 'btn btn-outline-danger btn-lg activityBtn' : 'btn btn-outline-success btn-lg activityBtn'"
+										(click)="changeStatus('breakdown')">
+									
+											<div *ngIf="breakdown == true; else elseBlock">Remove</div>
+											<ng-template #elseBlock>Add</ng-template>		
+									</button>
 								</div> 
 							</div>
 						</div>
@@ -65,7 +77,13 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="float-right">
-									<button type="button" class="btn btn-outline-success btn-lg activityBtn">Add</button>
+									<button
+										[ngClass]="notifications == true ? 'btn btn-outline-danger btn-lg activityBtn' : 'btn btn-outline-success btn-lg activityBtn'"
+										(click)="changeStatus('notifications')">
+									
+											<div *ngIf="notifications == true; else elseBlock">Remove</div>
+											<ng-template #elseBlock>Add</ng-template>		
+									</button>
 								</div> 
 							</div>
 						</div>
@@ -84,7 +102,13 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="float-right">
-									<button type="button" class="btn btn-outline-success btn-lg activityBtn">Add</button>
+									<button 
+										[ngClass]="offers == true ? 'btn btn-outline-danger btn-lg activityBtn' : 'btn btn-outline-success btn-lg activityBtn'"
+										(click)="changeStatus('offers')">
+									
+											<div *ngIf="offers == true; else elseBlock">Remove</div>
+											<ng-template #elseBlock>Add</ng-template>		
+									</button>
 								</div> 
 							</div>
 						</div>
