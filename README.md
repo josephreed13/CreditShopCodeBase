@@ -26,4 +26,4 @@ webpack                           4.39.2
 ## Get Started
 - clone repository
 - `npm install` to get required packages
-- `ng serve` and navigate to localhost:4200
+- `ng serve`
