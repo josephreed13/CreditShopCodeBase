@@ -2,6 +2,9 @@
 Angular CLI: 8.3.3  
 Node: 10.15.3  
 Angular: 8.2.5  
+... animations, common, compiler, compiler-cli, core, forms  
+... language-service, platform-browser, platform-browser-dynamic  
+... router  
 
 Package                           Version
 -----------------------------------------------------------
